@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Landing page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css"></link>
+    <link rel="stylesheet" href="css/fonts.css"></link>
+    <link rel="stylesheet" href="node_modules/lightpick/css/lightpick.css">
+    <link rel="stylesheet" href="css/media.css"></link>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css"/> -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"/>
+    <link rel="stylesheet" href="css/roomdetails.css"></link>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.css"/>
+</head>
+
+<body>
+<header>
+    <div class="container">
+        <div class="header-wrapper">
+            <a href="landing.html" class="logo">
+                <img src="images/logo.svg" alt="logo">
+                <img src="images/TOXIN.png" alt="logo title">
+            </a>
+            <nav class="header-navigation">
+                <div class="header-burger-btn">
+                    <span class="icon-menu"></span>
+                </div>   
+                <ul class="header-navigation__content"> 
+                    <li><a data-fancybox data-src="#aboutusModal" href="javascript:;">О нас</a></li>
+                    <li class="header-navigation__services-li">
+                        <a class="header-navigation__services" href="#">Услуги</a>
+                        <div class="header-navigation__sevices-item">
+                            <a data-fancybox data-src="#aboutusModal" href="javascript:;">Доставка еды</a>
+                            <a data-fancybox data-src="#aboutusModal" href="javascript:;">Охраняемая парковка</a>
+                            <a data-fancybox data-src="#aboutusModal" href="javascript:;">Прачечная</a>
+                            <a data-fancybox data-src="#aboutusModal" href="javascript:;">Библиотека</a>
+                            <a data-fancybox data-src="#aboutusModal" href="javascript:;">Бесплатный Wi-Fi</a>
+                        </div>
+                    </li>
+                    <li><a data-fancybox data-src="#vacancies" href="javascript:;">Вакансии</a></li>
+                    <li><a data-fancybox data-src="#news" href="javascript:;">Новости</a></li>
+                    <li class="header-navigation__conventions-li">
+                        <a class="header-navigation__conventions" href="#">Соглашения</a>
+                        <div class="header-navigation__conventions-item">
+                            <a data-fancybox data-src="#aboutusModal" href="javascript:;">Пользовательское соглашение</a>
+                            <a data-fancybox data-src="#aboutusModal" href="javascript:;">Политика конфиденциальности</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <div class="login-area">
+                <button class="login-btn">
+                    Войти
+                </button>
+                <button class="basic-btn">
+                    <div class="button-text">
+                        зарегистрироваться
+                    </div>
+                </button>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div id="aboutusModal">
+    <h2>О нас</h2>
+    <p>Какая-то информация о гостинице Toxin.</p>
+    <!-- <p><button data-fancybox-close class="btn">Close me</button></p> -->
+</div>
+<div id="vacancies">
+    <h2>Вакансии</h2>
+    <p>Вакансии Toxin.</p>
+</div>
+<div id="news">
+    <h2>Новости</h2>
+    <p>Новости о гостинице Toxin.</p>
+</div>
+
+<!-- <div class="header-navigation__sevices-item">
+    <div>1</div>
+    <div>2</div>
+</div> -->    <div class="room-details">
+        <div class="room-details__images">
+            <img src="images/room888_w981_h485.jpg" alt="room-888" class="room-details__primary-img">
+            <img src="images/room888_1.jpg" alt="" class="room-details__secondary1-img">
+            <img src="images/room888_2.jpg" alt="" class="room-details__secondary2-img">
+        </div>
+        <div class="room-details__content">
+            <div class="container">
+                <main class="room-details__details">
+                    <div class="room-details__item">
+                        <div class="about-room">
+                            <h1 class="about-room__title">
+                                Сведения о номере
+                            </h1>
+                            <div class="about-room__content">
+                                <div class="about-room__item">
+                                    <div class="about-room__item-content">
+                                        <span class="about-room__item-title">
+                                            Комфорт
+                                        </span><br>
+                                        Шумопоглощающие стены
+                                    </div>
+                                </div>
+                                <div class="about-room__item">
+                                    <div class="about-room__item-content">
+                                        <span class="about-room__item-title">
+                                            Удобство
+                                        </span><br>
+                                        Окно в каждой из спален
+                                    </div>
+                                </div>
+                                <div class="about-room__item">
+                                    <div class="about-room__item-content">
+                                        <span class="about-room__item-title">
+                                            Уют
+                                        </span><br>
+                                        Номер оснащён камином
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="room-details__impressions">
+                            <div class="total-price__text">
+                                Впечатления от номера
+                            </div>
+                            <div class="canvas-container">
+                                <canvas id="myChart" width="120" height="120"></canvas>
+                                <div id="do_legend">legend</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="room-details__item">
+                        <div class="room-details__title">
+                            <div class="room-client-review__title">
+                                Отзывы посетителей номера
+                            </div>
+                            <div class="room-client-review__number">2 отзыва</div>
+                        </div>
+                        <div class="room-client-review">
+                            <img src="images/sman.JPG" alt="avatar_1" class="room-client-review__avatar">
+                            <div class="room-client-review__name">
+                                Морфеус
+                            </div>
+                            <div class="room-client-review__date">
+                                5 дней назад
+                            </div>
+                            <button class="room-client-review__likes active" id="reviewBtn1">
+                                <i class="icon-favorite"></i>
+                                <div class="number">12</div>
+                            </button>
+                            <div class="room-client-review__text">
+                                Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.
+                            </div>
+                        </div>
+                        <div class="room-client-review">
+                            <img src="images/friman.JPG" alt="avatar_1" class="room-client-review__avatar">
+                            <div class="room-client-review__name">
+                                Гордон Фримен
+                            </div>
+                            <div class="room-client-review__date">
+                                Неделю назад
+                            </div>
+                            <button class="room-client-review__likes" id="reviewBtn2">
+                                <i class="icon-favorite"></i>
+                                <div class="number">12</div>
+                            </button>
+                            <div class="room-client-review__text">
+                                Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="room-details__item">
+                        <div class="room-details__rules">
+                            <div class="room-details__title">
+                                Правила
+                            </div>
+                            <ul class="room-details__rules-ul">
+                                <li>Нельзя с питомцами</li>
+                                <li>Без вечеринок и мероприятий</li>
+                                <li>Время прибытия — после 13:00,<br> а выезд до 12:00</li>
+                            </ul>
+                        </div>
+                        <div class="room-details__cancel">
+                            <div class="room-details__title">
+                                Отмена
+                            </div>
+                            <div class="room-details__cancel-text">
+                                Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
+                            </div>
+                        </div>
+                    </div>
+                </main>
+                <aside class="room-details__form">
+                    <form class="find-rooms__form">
+                        <div class="first-end-btwn">
+                            <div class="first-end-btwn__number">
+                                № 888 <span class="lux">люкс</span>
+                            </div>
+                            <div class="first-end-btwn__price">
+                                9 990₽ в сутки
+                            </div>
+                        </div>
+                        <div class="residence-dates">
+                            <div class="residence-dates__arrival">
+                                <div class="find-rooms__second-title">
+                                    ПРИБЫТИЕ
+                                </div>
+                                <div class="residence-dates__input">
+                                    <i class="icon-expand_more"></i>
+                                    <input class="calendar-dropdown" id="demo-3_1" placeholder="ДД.ММ.ГГГГ">
+                                </div>
+                            </div>
+                            <div class="residence-dates__exit">
+                                <div class="find-rooms__second-title">
+                                    ВЫЕЗД
+                                </div>
+                                <div class="residence-dates__input">
+                                    <i class="icon-expand_more"></i>
+                                    <input class="calendar-dropdown" id="demo-3_2" placeholder="ДД.ММ.ГГГГ">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="guests">
+                            <div class="find-rooms__second-title">
+                                ГОСТИ
+                            </div>
+                            <button id="guestsDropdownBtn" class="guests__dropdown-btn">
+                                <div class="guests__text">Сколько гостей</div>
+                            </button>
+                            <div class="guests__dropdown-content">
+                                <div class="guests__dropdown-item">
+                                    <div>взрослые</div>
+                                    <div class="dropdown-count-btns">
+                                        <button class="dropdown-num-change-btn" id="adultsDecrementBtn" disabled>-</button>
+                                        <span class="dropdown-count-result">0</span>
+                                        <button class="dropdown-num-change-btn" id="adultsIncrementBtn">+</button>
+                                    </div>
+                                </div>
+                                <div class="guests__dropdown-item">
+                                    <div>дети</div>
+                                    <div class="dropdown-count-btns">
+                                        <button class="dropdown-num-change-btn" id="childrenDecrementBtn" disabled>-</button>
+                                        <span class="dropdown-count-result">0</span>
+                                        <button class="dropdown-num-change-btn" id="childrenIncrementBtn">+</button>
+                                    </div>
+                                </div>
+                                <div class="guests__dropdown-item">
+                                    <div>младенцы</div>
+                                    <div class="dropdown-count-btns">
+                                        <button class="dropdown-num-change-btn" id="babiesDecrementBtn" disabled>-</button>
+                                        <span class="dropdown-count-result">0</span>
+                                        <button class="dropdown-num-change-btn" id="babiesIncrementBtn">+</button>
+                                    </div>
+                                </div>
+                                <div class="guests__dropdown-item guests__dropdown-item_pt20">
+                                    <div id="clearGuestsDropdownChanges" class="clear-dropdown-result">очистить</div>
+                                    <div id="acceptGuestsDropdownChanges" class="accept-dropdown-result">применить</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="additional-services">
+                            <div class="first-end-btwn first-end-btwn_mt10">
+                                <div class="selected-text selected-text_m0">
+                                    9 990₽ х 4 суток
+                                </div>
+                                <div class="selected-text selected-text_m0">
+                                    39 960₽
+                                </div>
+                            </div>
+                            <div class="additional-services__item">
+                                <div class="selected-text selected-text_m0 additional-services__text">
+                                    Сбор за услуги: скидка 2 179₽
+                                </div>
+                                <div class="info-icon" data-title="Дополнительная информация">
+                                    <span class="i-letter">i</span>
+                                </div>
+                                <div class="selected-text additional-services__price">
+                                    0₽
+                                </div>
+                            </div>
+                            <div class="additional-services__item">
+                                <div class="selected-text selected-text_m0 additional-services__text">
+                                    Сбор за дополнительные услуги
+                                </div>
+                                <div class="info-icon" data-title="Дополнительная информация">
+                                    <span class="i-letter">i</span>
+                                </div>
+                                <div class="selected-text additional-services__price">
+                                    300₽
+                                </div>
+                            </div>
+                        </div>
+                        <div class="total-price">
+                            <div class="total-price__text">
+                                Итого
+                            </div>
+                            <div class="total-price__dots"></div>
+                            <div class="total-price__price">
+                                38 081₽
+                            </div>
+                        </div>
+                        <button class="find-rooms-button">
+                            Подобрать номер
+                        </button>
+                    </form>
+                </aside>
+            </div>
+        </div>
+    </div>
+<footer>
+    <div class="container">
+        <div class="footer-widgets">
+            <div class="footer-logo">
+                <a href="#" class="logo">
+                    <img src="images/logo.svg" alt="logo">
+                    <img src="images/TOXIN.png" alt="logo title">
+                </a>
+                <h2>
+                    Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
+                </h2>
+            </div>
+            <div class="footer-nav">
+                <h2>
+                    навигация
+                </h2>
+                <ul>
+                    <li><a href="#">О нас</a></li>
+                    <li><a href="#">Новости</a></li>
+                    <li><a href="#">Служба поддержки</a></li>
+                    <li><a href="#">Услуги</a></li>
+                </ul>
+            </div>
+            <div class="footer-nav">
+                <h2>
+                    о нас
+                </h2>
+                <ul>
+                    <li><a href="#">О сервисе</a></li>
+                    <li><a href="#">Наша команда</a></li>
+                    <li><a href="#">Вакансии</a></li>
+                    <li><a href="#">Инвесторы</a></li>
+                </ul>
+            </div>
+            <div class="footer-nav">
+                <h2>
+                    служба поддержки
+                </h2>
+                <ul>
+                    <li><a href="#">Соглашения</a></li>
+                    <li><a href="#">Сообщества</a></li>
+                    <li><a href="#">Связь с нами</a></li>
+                </ul>
+            </div>
+            <div class="footer-nav">
+                <h2>
+                    подписка
+                </h2>
+                <p>
+                    Получайте специальные предложения и новости сервиса
+                </p>
+                <form action="">
+                    <div class="subscribe-form__email-input">
+                        <input class="subscribe-email" type="email" placeholder="Email">
+                        <button class="subscribe-form__submit-btn" type="submit">
+                            <i class="icon-arrow_forward"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            <h2 class="footer-copyright__text">
+                Copyright © 2018 Toxin отель. Все права защищены.
+            </h2>
+            <div class="footer-icons">
+                <a href="https://twitter.com/" target="_blank"><i class="icon-twitter"></i></a>
+                <a href="https://www.facebook.com/" target="_blank"><i class="icon-facebook-square"></i></a>
+                <a href="https://www.instagram.com/" target="_blank"><i class="icon-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+    <script src="node_modules/lightpick/lightpick.js"></script>
+    <script src="js/datepicker.js"></script>
+    <script src="js/dropdowns.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js"></script>
+
+    <script src="js/graphs.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+    <!-- <script src="js/slick.min.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"></script> -->
+    <!-- <script src="js/slider.js"></script> -->
+</body>

@@ -1,0 +1,102 @@
+/* My styles */
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-Bold.eot");
+  src: local("☺"), url("../fonts/Montserrat-Bold.woff") format("woff"),
+    url("../fonts/Montserrat-Bold.ttf") format("truetype"),
+    url("../fonts/Montserrat-Bold.svg") format("svg");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-Regular.eot");
+  src: local("☺"), url("../fonts/Montserrat-Regular.woff") format("woff"),
+    url("../fonts/Montserrat-Regular.ttf") format("truetype"),
+    url("../fonts/Montserrat-Regular.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Icomoon */
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?7viwmi');
+  src:  url('../fonts/icomoon.eot?7viwmi#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?7viwmi') format('truetype'),
+    url('../fonts/icomoon.woff?7viwmi') format('woff'),
+    url('../fonts/icomoon.svg?7viwmi#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-facebook-square:before {
+  content: "\e900";
+}
+.icon-twitter:before {
+  content: "\e901";
+}
+.icon-instagram:before {
+  content: "\e902";
+}
+.icon-menu:before {
+  content: "\e90c";
+}
+.icon-arrow_back:before {
+  content: "\e90d";
+}
+.icon-favorite_outline:before {
+  content: "\e903";
+}
+.icon-favorite:before {
+  content: "\e904";
+}
+.icon-whatshot:before {
+  content: "\e905";
+}
+.icon-location_city:before {
+  content: "\e906";
+}
+.icon-insert_emoticon:before {
+  content: "\e907";
+}
+.icon-tag_faces:before {
+  content: "\e907";
+}
+.icon-mood:before {
+  content: "\e907";
+}
+.icon-star_outline:before {
+  content: "\e908";
+}
+.icon-star:before {
+  content: "\e909";
+}
+.icon-grade:before {
+  content: "\e909";
+}
+.icon-arrow_forward:before {
+  content: "\e90a";
+}
+.icon-expand_more:before {
+  content: "\e90b";
+}

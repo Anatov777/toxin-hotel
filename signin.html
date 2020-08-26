@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Landing page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css"></link>
+    <link rel="stylesheet" href="css/fonts.css"></link>
+    <link rel="stylesheet" href="css/media.css"></link>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"/>
+</head>
+
+<body>
+<header>
+    <div class="container">
+        <div class="header-wrapper">
+            <a href="landing.html" class="logo">
+                <img src="images/logo.svg" alt="logo">
+                <img src="images/TOXIN.png" alt="logo title">
+            </a>
+            <nav class="header-navigation">
+                <div class="header-burger-btn">
+                    <span class="icon-menu"></span>
+                </div>   
+                <ul class="header-navigation__content"> 
+                    <li><a data-fancybox data-src="#aboutusModal" href="javascript:;">О нас</a></li>
+                    <li class="header-navigation__services-li">
+                        <a class="header-navigation__services" href="#">Услуги</a>
+                        <div class="header-navigation__sevices-item">
+                            <a data-fancybox data-src="#aboutusModal" href="javascript:;">Доставка еды</a>
+                            <a data-fancybox data-src="#aboutusModal" href="javascript:;">Охраняемая парковка</a>
+                            <a data-fancybox data-src="#aboutusModal" href="javascript:;">Прачечная</a>
+                            <a data-fancybox data-src="#aboutusModal" href="javascript:;">Библиотека</a>
+                            <a data-fancybox data-src="#aboutusModal" href="javascript:;">Бесплатный Wi-Fi</a>
+                        </div>
+                    </li>
+                    <li><a data-fancybox data-src="#vacancies" href="javascript:;">Вакансии</a></li>
+                    <li><a data-fancybox data-src="#news" href="javascript:;">Новости</a></li>
+                    <li class="header-navigation__conventions-li">
+                        <a class="header-navigation__conventions" href="#">Соглашения</a>
+                        <div class="header-navigation__conventions-item">
+                            <a data-fancybox data-src="#aboutusModal" href="javascript:;">Пользовательское соглашение</a>
+                            <a data-fancybox data-src="#aboutusModal" href="javascript:;">Политика конфиденциальности</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <div class="login-area">
+                <button class="login-btn">
+                    Войти
+                </button>
+                <button class="basic-btn">
+                    <div class="button-text">
+                        зарегистрироваться
+                    </div>
+                </button>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div id="aboutusModal">
+    <h2>О нас</h2>
+    <p>Какая-то информация о гостинице Toxin.</p>
+    <!-- <p><button data-fancybox-close class="btn">Close me</button></p> -->
+</div>
+<div id="vacancies">
+    <h2>Вакансии</h2>
+    <p>Вакансии Toxin.</p>
+</div>
+<div id="news">
+    <h2>Новости</h2>
+    <p>Новости о гостинице Toxin.</p>
+</div>
+
+<!-- <div class="header-navigation__sevices-item">
+    <div>1</div>
+    <div>2</div>
+</div> -->    <div class="signin">
+        <img src="images/signin.jpg" alt="signin">
+        <form class="registration">
+            <div class="big-title">
+                Войти
+            </div>
+            <div class="row-items row-items_mt20">
+                <input type="text" placeholder="Email">
+                <input type="text" placeholder="Пароль">
+            </div>
+            <button class="find-rooms-button">
+                Войти
+            </button>
+            <div class="signin-create">
+                <div class="signin-create__text">
+                    Нет аккаунта на Toxin?
+                </div>
+                <button class="login-btn">
+                    Создать
+                </button>
+            </div>
+        </form>
+    </div>
+<footer>
+    <div class="container">
+        <div class="footer-widgets">
+            <div class="footer-logo">
+                <a href="#" class="logo">
+                    <img src="images/logo.svg" alt="logo">
+                    <img src="images/TOXIN.png" alt="logo title">
+                </a>
+                <h2>
+                    Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
+                </h2>
+            </div>
+            <div class="footer-nav">
+                <h2>
+                    навигация
+                </h2>
+                <ul>
+                    <li><a href="#">О нас</a></li>
+                    <li><a href="#">Новости</a></li>
+                    <li><a href="#">Служба поддержки</a></li>
+                    <li><a href="#">Услуги</a></li>
+                </ul>
+            </div>
+            <div class="footer-nav">
+                <h2>
+                    о нас
+                </h2>
+                <ul>
+                    <li><a href="#">О сервисе</a></li>
+                    <li><a href="#">Наша команда</a></li>
+                    <li><a href="#">Вакансии</a></li>
+                    <li><a href="#">Инвесторы</a></li>
+                </ul>
+            </div>
+            <div class="footer-nav">
+                <h2>
+                    служба поддержки
+                </h2>
+                <ul>
+                    <li><a href="#">Соглашения</a></li>
+                    <li><a href="#">Сообщества</a></li>
+                    <li><a href="#">Связь с нами</a></li>
+                </ul>
+            </div>
+            <div class="footer-nav">
+                <h2>
+                    подписка
+                </h2>
+                <p>
+                    Получайте специальные предложения и новости сервиса
+                </p>
+                <form action="">
+                    <div class="subscribe-form__email-input">
+                        <input class="subscribe-email" type="email" placeholder="Email">
+                        <button class="subscribe-form__submit-btn" type="submit">
+                            <i class="icon-arrow_forward"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            <h2 class="footer-copyright__text">
+                Copyright © 2018 Toxin отель. Все права защищены.
+            </h2>
+            <div class="footer-icons">
+                <a href="https://twitter.com/" target="_blank"><i class="icon-twitter"></i></a>
+                <a href="https://www.facebook.com/" target="_blank"><i class="icon-facebook-square"></i></a>
+                <a href="https://www.instagram.com/" target="_blank"><i class="icon-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="js/dropdowns.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+</body>
