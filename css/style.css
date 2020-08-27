@@ -1040,6 +1040,18 @@ nav ul a {
 
 .lightpick__select.lightpick__select-months {
   margin-right: 5px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  text-transform: capitalize;
+}
+
+.lightpick__select.lightpick__select-years {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
 }
 
 #aboutusModal,
