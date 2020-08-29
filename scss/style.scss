@@ -1,4 +1,3 @@
-@charset "UTF-8";
 * {
   box-sizing: border-box;
 }
@@ -29,6 +28,7 @@ button {
   padding: 0px 15px;
 }
 
+// Особый текст
 .lux {
   font-family: Montserrat;
   font-style: normal;
@@ -49,7 +49,6 @@ button {
   position: absolute;
   right: 20px;
 }
-
 .room-number {
   font-family: Montserrat;
   font-style: normal;
@@ -60,6 +59,7 @@ button {
 }
 
 /* Header */
+
 header {
   width: 100%;
   height: 70px;
@@ -79,9 +79,9 @@ header {
   display: flex;
   align-items: center;
   margin-right: auto;
-}
-.logo img + img {
-  margin-left: 12.5px;
+  & img + img {
+    margin-left: 12.5px;
+  }
 }
 
 nav ul li + li {
@@ -112,68 +112,69 @@ nav ul a {
   display: flex;
   align-items: center;
   list-style-type: none;
-}
-.header-navigation__content .header-navigation__services-li {
-  position: relative;
-}
-.header-navigation__content .header-navigation__services-li .header-navigation__services {
-  display: flex;
-  align-items: center;
-  position: relative;
-}
-.header-navigation__content .header-navigation__services-li .header-navigation__services::after {
-  content: "";
-  font-family: "icomoon";
-  font-size: 24px;
-  line-height: 20px;
-  color: rgba(31, 32, 65, 0.5);
-}
-.header-navigation__content .header-navigation__services-li .header-navigation__sevices-item {
-  display: none;
-  position: absolute;
-  top: 40px;
-  background-color: #f1f1f1;
-  z-index: 1;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  padding: 10px;
-}
-.header-navigation__content .header-navigation__services-li .header-navigation__sevices-item a + a {
-  margin-top: 10px;
-}
-.header-navigation__content .header-navigation__services-li:hover .header-navigation__sevices-item {
-  display: block;
-}
-.header-navigation__content .header-navigation__conventions-li {
-  position: relative;
-}
-.header-navigation__content .header-navigation__conventions-li .header-navigation__conventions {
-  display: flex;
-  align-items: center;
-  position: relative;
-}
-.header-navigation__content .header-navigation__conventions-li .header-navigation__conventions::after {
-  content: "";
-  font-family: "icomoon";
-  font-size: 24px;
-  line-height: 20px;
-  color: rgba(31, 32, 65, 0.5);
-}
-.header-navigation__content .header-navigation__conventions-li .header-navigation__conventions-item {
-  display: none;
-  position: absolute;
-  top: 40px;
-  background-color: #f1f1f1;
-  z-index: 1;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  padding: 10px;
-}
-.header-navigation__content .header-navigation__conventions-li .header-navigation__conventions-item a + a {
-  margin-top: 10px;
-}
-.header-navigation__content .header-navigation__conventions-li:hover .header-navigation__conventions-item {
-  display: block;
+  .header-navigation__services-li {
+    position: relative;
+    .header-navigation__services {
+      display: flex;
+      align-items: center;
+      position: relative;
+      &::after {
+        content: "\e90b";
+        font-family: "icomoon";
+        font-size: 24px;
+        line-height: 20px;
+        color: rgba(31, 32, 65, 0.5);
+      }
+    }
+    .header-navigation__sevices-item {
+      display: none;
+      position: absolute;
+      top: 40px;
+      background-color: #f1f1f1;
+      z-index: 1;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      padding: 10px;
+      & a + a {
+        margin-top: 10px;
+      }
+    }
+    &:hover .header-navigation__sevices-item {
+      display: block;
+    }
+  }
+
+  .header-navigation__conventions-li {
+    position: relative;
+    .header-navigation__conventions {
+      display: flex;
+      align-items: center;
+      position: relative;
+      &::after {
+        content: "\e90b";
+        font-family: "icomoon";
+        font-size: 24px;
+        line-height: 20px;
+        color: rgba(31, 32, 65, 0.5);
+      }
+    }
+    .header-navigation__conventions-item {
+      display: none;
+      position: absolute;
+      top: 40px;
+      background-color: #f1f1f1;
+      z-index: 1;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      padding: 10px;
+      & a + a {
+        margin-top: 10px;
+      }
+    }
+    &:hover .header-navigation__conventions-item {
+      display: block;
+    }
+  }
 }
 
 .header-burger-btn span::before {
@@ -204,9 +205,9 @@ nav ul a {
   height: 44px;
   background-color: #fff;
   border: 2px solid #bc9cff;
-}
-.login-btn:hover {
-  opacity: 0.5;
+  &:hover {
+    opacity: 0.5;
+  }
 }
 
 .basic-btn {
@@ -227,9 +228,9 @@ nav ul a {
   text-align: center;
   text-transform: uppercase;
   color: #ffffff;
-}
-.basic-btn:hover {
-  opacity: 0.5;
+  &:hover {
+    opacity: 0.5;
+  }
 }
 
 .login-btn + .basic-btn {
@@ -237,6 +238,7 @@ nav ul a {
 }
 
 /* Секция для формы поиска номеров */
+
 .find-rooms {
   background: url(../images/main.jpg) no-repeat;
   background-size: cover;
@@ -255,6 +257,7 @@ nav ul a {
   max-width: 380px;
   padding: 40px 30px 30px 30px;
   background: #ffffff;
+  // border: 1px solid rgba(0, 0, 0, 0.12);
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 }
@@ -330,6 +333,7 @@ nav ul a {
 }
 
 /* */
+
 .guests {
   margin: 20px 0 0 0;
   position: relative;
@@ -357,7 +361,7 @@ nav ul a {
 }
 
 .guests__dropdown-btn::after {
-  content: "";
+  content: "\e90b";
   position: absolute;
   right: 0;
   font-family: "icomoon";
@@ -478,7 +482,7 @@ nav ul a {
 }
 
 .find-rooms-button::after {
-  content: "";
+  content: "\e90a";
   font-family: "icomoon";
   font-size: 24px;
   line-height: 24px;
@@ -509,6 +513,7 @@ nav ul a {
 }
 
 /* Footer */
+
 .footer-widgets {
   display: flex;
   flex-wrap: wrap;
@@ -650,6 +655,7 @@ nav ul a {
 }
 
 /* Registration */
+
 .registration {
   margin: 40px 0 0 0;
   background: #ffffff;
@@ -675,7 +681,7 @@ nav ul a {
   margin: 20px 0 0 0;
 }
 
-.registration div input[type=text] {
+.registration div input[type="text"] {
   background: #ffffff;
   border: 1px solid rgba(31, 32, 65, 0.25);
   box-sizing: border-box;
@@ -687,6 +693,7 @@ nav ul a {
   font-weight: normal;
   font-size: 14px;
   line-height: 18px;
+  // color: rgba(31, 32, 65, 0.25);
   padding-left: 15px;
 }
 
@@ -792,7 +799,8 @@ nav ul a {
   content: "";
   display: block;
   position: absolute;
-  transition: transform var(--d-t, 0.3s) var(--d-t-e, ease), opacity var(--d-o, 0.2s);
+  transition: transform var(--d-t, 0.3s) var(--d-t-e, ease),
+    opacity var(--d-o, 0.2s);
   border-radius: 50%;
   width: 12px;
   height: 12px;
@@ -816,43 +824,48 @@ nav ul a {
   box-shadow: 0 0 0 var(--focus);
 }
 
+// Sign in form
+
 .signin {
   display: flex;
   justify-content: center;
   position: relative;
   padding: 0 15px;
-}
-.signin img {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.signin form {
-  z-index: 1;
-  margin: 160px 0;
-  width: 100%;
-}
-.signin .row-items {
-  display: flex;
-  flex-direction: column;
-}
-.signin .row-items input + input {
-  margin: 10px 0 0 0;
-}
-.signin .row-items_mt20 {
-  margin: 20px 0 0 0;
-}
-.signin .signin-create {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 30px;
-}
-.signin .signin-create .signin-create__text {
-  align-self: center;
+  & img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  & form {
+    z-index: 1;
+    margin: 160px 0;
+    width: 100%;
+  }
+  .row-items {
+    display: flex;
+    flex-direction: column;
+    & input + input {
+      margin: 10px 0 0 0;
+    }
+  }
+
+  .row-items_mt20 {
+    margin: 20px 0 0 0;
+  }
+
+  .signin-create {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    .signin-create__text {
+      align-self: center;
+    }
+  }
 }
 
 /* Calendar */
+
 :root {
   --lp-bradius: 22px;
 }
@@ -883,6 +896,7 @@ nav ul a {
 
 .lightpick__day-of-the-week {
   justify-content: center;
+
   font-family: Montserrat;
   font-style: normal;
   font-weight: bold;
@@ -1060,6 +1074,8 @@ nav ul a {
   font-weight: normal;
   font-size: 14px;
 }
+
+// Modal
 
 #aboutusModal,
 #vacancies,
