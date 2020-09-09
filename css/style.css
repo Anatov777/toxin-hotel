@@ -131,7 +131,7 @@ nav ul a {
 .header-navigation__content .header-navigation__services-li .header-navigation__sevices-item {
   display: none;
   position: absolute;
-  top: 40px;
+  top: 20px;
   background-color: #f1f1f1;
   z-index: 1;
   min-width: 160px;
@@ -162,7 +162,7 @@ nav ul a {
 .header-navigation__content .header-navigation__conventions-li .header-navigation__conventions-item {
   display: none;
   position: absolute;
-  top: 40px;
+  top: 20px;
   background-color: #f1f1f1;
   z-index: 1;
   min-width: 160px;
