@@ -145,8 +145,6 @@
   }
 }
 
-
-
 @media (min-width: 960px) {
   .header-navigation__content {
     display: flex !important;
@@ -154,6 +152,7 @@
   .login-area {
     display: flex !important;
   }
+}
 
 @media (min-width: 525px) {
   .login-area {

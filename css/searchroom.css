@@ -197,17 +197,12 @@ h6 {
   margin-top: 30px;
 }
 .search-rooms > .container .filtered-rooms .filtered-rooms__rooms {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 12px;
   margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  grid-gap: 12px;
 }
 .search-rooms > .container .filtered-rooms .filtered-rooms__card {
-  min-width: 260px;
-  max-width: 500px;
-  flex-grow: 1;
-  width: 260px;
   background: #ffffff;
   box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
   border-radius: 4px;
@@ -536,6 +531,7 @@ h6 {
   font-size: 24px;
   line-height: 20px;
   background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
